@@ -69,7 +69,6 @@ public class ProcessAllWindowFunctionTopN {
                             out.collect( "Top" + (i + 1) + "=> url为: " + urlList.get(i).f0 + "，数量为："
                                     + urlList.get(i).f1 + ", 窗口为：" + new Timestamp(start) + " ~ " + new Timestamp(end));
                         }
-
                     }
 
                     @Override
