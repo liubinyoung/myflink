@@ -58,7 +58,7 @@ public class ProcessAllWindowFunctionTopN {
                         Collections.sort(urlList, new Comparator<Tuple2<String, Long>>() {
                             @Override
                             public int compare(Tuple2<String, Long> o1, Tuple2<String, Long> o2) {
-                                return o1.f1 - o2.f1 > 0 ? -1 : 1;
+                                return o2.f1.intValue() - o1.f1.intValue();
                             }
                         });
 
