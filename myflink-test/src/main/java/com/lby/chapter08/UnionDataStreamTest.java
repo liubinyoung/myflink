@@ -10,6 +10,11 @@ import org.apache.flink.util.Collector;
 
 import java.time.Duration;
 
+/**
+ * 通过union算子进行流的合并。
+ * 可以对多条流进行合并，而且数据类型必须相同，所以灵活性不足。
+ * 合并之后，水位线以时间慢的为准。
+ */
 public class UnionDataStreamTest {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment streamEnv = StreamExecutionEnvironment.getExecutionEnvironment();
